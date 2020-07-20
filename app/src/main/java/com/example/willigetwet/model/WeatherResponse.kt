@@ -26,11 +26,18 @@ class WeatherForecast {
     @SerializedName("clouds")
     var clouds: Clouds? = null
     @SerializedName("dt_txt")
-    var dtTxt: Date? = null
+    var dtTxt: String = ""
     @SerializedName("dt")
     var dt: Int = 0
     @SerializedName("sys")
     var sys: Sys? = null
+    @SerializedName("rain")
+    var rain: Rain? = null
+}
+
+class Rain {
+    @SerializedName("3h")
+    var rainValue: Float = 0.toFloat()
 }
 
 class Coord {
@@ -101,9 +108,9 @@ class City {
     @SerializedName("timezone")
     var timezone: Float = 0.toFloat()
     @SerializedName("sunrise")
-    var sunrise: Int = 0
+    var sunrise: Long = 0
     @SerializedName("sunset")
-    var sunset: Int = 0
+    var sunset: Long = 0
 }
 
 

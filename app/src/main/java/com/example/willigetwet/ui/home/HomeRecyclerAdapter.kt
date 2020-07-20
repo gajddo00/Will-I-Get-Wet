@@ -1,4 +1,4 @@
-package com.example.willigetwet.ui.home
+package com.example.willigetwet.ui.ui.home
 
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +24,9 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<HomeRecyclerAdapter.ViewHolder>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.forecast_list_element, parent, false)
-        return ViewHolder(view)
+        return ViewHolder(
+            view
+        )
     }
 
     override fun getItemCount(): Int = forecasts.size
