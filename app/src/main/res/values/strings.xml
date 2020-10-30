@@ -4,4 +4,20 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Clouds">Clouds</string>
+    <string name="top_layer">5 - 13km</string>
+    <string name="cirrus">cirrus</string>
+    <string name="cirrocumulus">cirrocumulus</string>
+    <string name="cirrostratus">cirrostratus</string>
+    <string name="cirro">cirro</string>
+    <string name="cumulus">cumulus</string>
+    <string name="stratus">stratus</string>
+    <string name="high_clouds">High clouds</string>
+    <string name="middle_clouds">Middle clouds</string>
+    <string name="middle_layer">2 - 7km</string>
+    <string name="altocumulus">altocumulus</string>
+    <string name="alto">alto</string>
+    <string name="altostratus">altostratus</string>
 </resources>

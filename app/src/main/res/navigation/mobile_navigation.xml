@@ -10,5 +10,10 @@
         android:name="com.example.willigetwet.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_clouds"
+        android:name="com.example.willigetwet.ui.cloudsbook.CloudsFragment"
+        android:label="Clouds"
+        tools:layout="@layout/fragment_clouds"/>
 
 </navigation>

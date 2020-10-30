@@ -11,8 +11,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.willigetwet.R
 import com.example.willigetwet.databinding.FragmentHomeBinding
+import com.example.willigetwet.model.Weather
 import com.example.willigetwet.model.WeatherForecast
 import com.example.willigetwet.model.WeatherResponse
+import com.example.willigetwet.utility.WeatherDataProcessor
 import java.time.Instant
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -22,6 +24,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var homeViewModel: HomeViewModel
+    private lateinit var weatherDataProcessor: WeatherDataProcessor
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,10 +35,10 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         binding = FragmentHomeBinding.bind(root)
 
-
         homeViewModel.weatherForecast.observe(viewLifecycleOwner, Observer {
             it.let {
                 val currentWeather = it?.list?.get(0)
+                weatherDataProcessor = WeatherDataProcessor(it?.list?.toMutableList()!!)
 
                 setWeatherIcon(currentWeather)
                 setWeatherTemperature(currentWeather)
@@ -90,7 +93,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun setWeatherRain(currentWeather: WeatherForecast?) {
-        binding.weatherRain.text = currentWeather?.rain?.rainValue?.toString().plus("mm")
+        if (currentWeather?.rain?.rainValue == null) {
+            binding.weatherRain.text = "n/a"
+        } else {
+            binding.weatherRain.text = currentWeather.rain?.rainValue.toString().plus("mm")
+        }
     }
 
     private fun setSunriseTime(currentWeather: WeatherResponse?) {
@@ -104,12 +111,12 @@ class HomeFragment : Fragment() {
         binding.weatherSunset.text = daytimeToString(formattedDate, TIMEOFDAY.PM)
     }
 
-    private fun daytimeToString(formattedDate: Calendar, timeofday: TIMEOFDAY): String {
+    private fun daytimeToString(formattedDate: Calendar, timeOfDay: TIMEOFDAY): String {
         var hour = formattedDate.get(Calendar.HOUR)
         var minutes = formattedDate.get(Calendar.MINUTE).toString()
 
         if (minutes.length == 1)  minutes = "0$minutes"
-        if (timeofday == TIMEOFDAY.PM) hour += 12
+        if (timeOfDay == TIMEOFDAY.PM) hour += 12
 
         return "$hour:$minutes"
     }
