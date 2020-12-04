@@ -1,0 +1,80 @@
+[
+  {
+    "id": "0",
+    "name": "cirrus",
+    "description": "Cirrus clouds are made of ice crystals and look like long, thin, wispy white streamers high in the sky. They are commonly known as \"mare's tails\" because they are shaped like the tail of a horse. Cirrus clouds are often seen during fair weather. But if they build up larger over time and are followed by cirrostratus clouds, there may be a warm front on the way. ",
+    "rainProbability": "NO"
+  },
+  {
+    "id": "1",
+    "name": "cirrocumulus",
+    "description": "Cirrocumulus clouds are small rounded puffs that usually appear in long rows high in the sky. Cirrocumulus are usually white, but sometimes appear gray. They are the same size or smaller than the width of your littlest finger when you hold up your hand at arm's length. When these clouds cover a lot of the sky, they can look like the scales of a fish, which is it is called a \"mackerel sky.” Cirrocumulus are common in winter and indicate fair, but cold, weather.",
+    "rainProbability": "NO"
+  },
+  {
+    "id": "2",
+    "name": "cirrostratus",
+    "description": "Cirrostratus clouds are high, thin sheet-like thin clouds that usually cover the entire sky. The clouds are so thin that the Sun or moon can sometimes shine through and appear to have a halo as light hits the ice crystals and bends. The halo is the width of your hand held at arm's length. Cirrostratus clouds usually come 12 to 24 hours before a rain or snowstorm.",
+    "rainProbability": "NO"
+  },
+  {
+    "id": "3",
+    "name": "altocumulus",
+    "description": "Altocumulus clouds are mid-level, grayish-white with one part darker than the other. Altocumulus clouds usually form in groups and are about one kilometer thick. Altocumulus clouds are about as wide as your thumb when you hold up your hand at arm's length. If you see altocumulus clouds on a warm, humid morning, there might be a thunderstorm by late afternoon. Mostly found in settled weather, altocumulus clouds are usually composed of droplets, but may also contain ice crystals. Precipitation from these clouds is rare, but even if rain does fall it doesn't reach the ground.",
+    "rainProbability": "RARELY"
+  },
+  {
+    "id": "4",
+    "name": "altostratus",
+    "description": "Altostratus clouds are mid-level, gray or blue-gray clouds that usually cover the whole sky. The Sun or moon may shine through an altostratus cloud, but will appear watery or fuzzy. If you see altostratus clouds, a storm with continuous rain or snow might be on its way. Occasionally, rain falls from an altostratus cloud. If the rain hits the ground, then the cloud has become a nimbostratus.",
+    "rainProbability": "KIND OF"
+  },
+  {
+    "id": "5",
+    "name": "stratus",
+    "description": "Stratus clouds are low and have a uniform gray in color and can cover most or all of the sky. Stratus clouds can look like a fog that doesn't reach the ground. Light mist or drizzle is sometimes falling when stratus clouds are in the sky.",
+    "rainProbability": "DRIZZLE"
+  },
+  {
+    "id": "6",
+    "name": "stratocumulus",
+    "description": "Stratocumulus clouds are low, lumpy, and gray. Sometimes they line up in rows and other times they spread out. Only light rain (usually drizzle) falls from stratocumulus clouds. To distinguish between a stratocumulus and an altocumulus cloud, point your hand toward the cloud. If the cloud is about the size of your fist, then it is stratocumulus.",
+    "rainProbability": "DRIZZLE"
+  },
+  {
+    "id": "7",
+    "name": "nimbostratus",
+    "description": "Nimbostratus clouds are dark gray, have ragged bases and sit low in the sky. Nimbostratus clouds are associated with continuous rain or snow. Sometimes they cover the whole sky and you can't see the edges of the cloud. Although it is classed as a middle-level layer cloud, its base is generally low at 0 to 2 km (0 to 6,500 ft), often very close or even touching the ground. Nimbostratus are also classified as clouds of extreme vertical development.",
+    "rainProbability": "ABSOLUTELY"
+  },
+  {
+    "id": "8",
+    "name": "cumulus",
+    "description": "Cumulus clouds have vertical growth. They are puffy white or light gray clouds that look like floating cotton balls. Cumulus clouds have sharp outlines and a flat base at a height of 1000m. They are generally about one kilometer wide which is about the size of your fist or larger when you hold up your hand at arm's length to look at the cloud. Cumulus clouds can be associated with fair or stormy weather. Watch for rain showers when the cloud’s tops look like cauliflower heads.",
+    "rainProbability": "YES"
+  },
+  {
+    "id": "9",
+    "name": "cumulonimbus",
+    "description": "Cumulonimbus clouds also have vertical growth and can grow up to 10 km high. At this height, high winds will flatten the top of the cloud out into an anvil-like shape. Cumulonimbus clouds are thunderstorm clouds and are associated with heavy rain, snow, hail, lightning, and sometimes tornadoes.",
+    "rainProbability": "STORM"
+  },
+  {
+    "id": "10",
+    "name": "lenticular",
+    "description": "Lenticular, or lee wave, clouds form downwind of an obstacle in the path of a strong air current. In the Boulder, Colorado area, the obstacle is the Front Range of the Rocky Mountains, seen at the bottom of the picture. Wind blows most types of clouds across the sky, but lenticular clouds seem to stay in one place. Air moves up and over a mountain, with the lenticular cloud forming just past the mountaintop.  The cloud evaporates on the downwind side, so it appears stationary even though air is moving through the cloud. Lenticular clouds are lens-shaped and often look like flying saucers.",
+    "rainProbability": "NO"
+  },
+  {
+    "id": "11",
+    "name": "kelvin-helmholtz",
+    "description": "Kelvin-Helmholtz clouds look like breaking waves in the ocean. After wind blows up and over a barrier, like a mountain, the air continues flowing through the atmosphere in a wavelike pattern. Complex evaporation and condensation patterns create the capped tops and cloudless troughs of the waves. These clouds form when there is a difference in the wind speed or direction between two wind currents in the atmosphere. This photograph of Kelvin-Helmholtz clouds was taken in the foothills of the Rocky Mountains.",
+    "rainProbability": "NO"
+  },
+  {
+    "id": "12",
+    "name": "mammatus",
+    "description": "Mammatus clouds are pouches of clouds that hang underneath the base of a cloud. They are most often associated with cumulonimbus clouds that produce very strong storms. These clouds usually form during warm months, and are formed by descending air in the cloud. Mammatus clouds are sometimes described as looking like a field of tennis balls or melons, or like female human breasts. In fact, the name \"mammatus\" comes from the Latin word mamma, or breast.",
+    "rainProbability": "STORM"
+  }
+]

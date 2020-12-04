@@ -20,4 +20,22 @@
     <string name="altocumulus">altocumulus</string>
     <string name="alto">alto</string>
     <string name="altostratus">altostratus</string>
+    <string name="nimbostratus">nimbostratus</string>
+    <string name="nimbo">nimbo</string>
+    <string name="stratocumulus">stratocumulus</string>
+    <string name="strato">strato</string>
+    <string name="low_clouds">surface - 2km</string>
+    <string name="lower_clouds">lower clouds</string>
+    <string name="vertical_clouds">vertical clouds</string>
+    <string name="surface_13km">surface - 13km</string>
+    <string name="cumulonimbus">cumulonimbus</string>
+    <string name="cumulo">cumulo</string>
+    <string name="nimbus">nimbus</string>
+    <string name="unusual_clouds">unusual clouds</string>
+    <string name="lenticular">lenticular</string>
+    <string name="kelvin_helmholtz">kelvin-helmholtz</string>
+    <string name="kelvin">kelvin</string>
+    <string name="helmholtz">helmholtz</string>
+    <string name="mammatus">mammatus</string>
+    <string name="weather">Weather</string>
 </resources>
