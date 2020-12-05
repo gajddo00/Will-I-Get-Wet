@@ -10,10 +10,29 @@
         android:name="com.example.willigetwet.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
+
     <fragment
         android:id="@+id/navigation_clouds"
         android:name="com.example.willigetwet.ui.cloudsbook.CloudsFragment"
         android:label="Clouds"
-        tools:layout="@layout/fragment_clouds"/>
+        tools:layout="@layout/fragment_clouds">
+        <action android:id="@+id/nav_to_detail"
+            app:destination="@+id/cloud_detail">
+        </action>
+    </fragment>
 
+    <fragment
+        android:id="@+id/cloud_detail"
+        android:name="com.example.willigetwet.ui.clouddetail.CloudDetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_cloud_detail">
+        <argument
+            android:name="tag"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="default"/>
+    </fragment>
 </navigation>

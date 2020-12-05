@@ -8,6 +8,8 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.willigetwet.R
 import com.example.willigetwet.databinding.FragmentHomeBinding
@@ -15,16 +17,19 @@ import com.example.willigetwet.model.Weather
 import com.example.willigetwet.model.WeatherForecast
 import com.example.willigetwet.model.WeatherResponse
 import com.example.willigetwet.utility.WeatherDataProcessor
+import cs.jejda.start.adapters.ForecastRecyclerViewAdapter
 import java.time.Instant
 import java.time.format.DateTimeFormatter
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.time.hours
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var homeViewModel: HomeViewModel
-    private lateinit var weatherDataProcessor: WeatherDataProcessor
+    private var weatherDataProcessor = WeatherDataProcessor()
+    private var forecastRecyclerView: ForecastRecyclerViewAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,9 +41,18 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.bind(root)
 
         homeViewModel.weatherForecast.observe(viewLifecycleOwner, Observer {
-            it.let {
-                val currentWeather = it?.list?.get(0)
-                weatherDataProcessor = WeatherDataProcessor(it?.list?.toMutableList()!!)
+            it?.let {
+                val currentWeather = it.list?.get(0)
+                it.list?.toMutableList()?.let {
+                    val forecats = weatherDataProcessor.getForecastForNextFiveDays(it)
+                    val recyclerView = view?.findViewById<RecyclerView>(R.id.forecast_recyclerview)
+                    forecastRecyclerView = ForecastRecyclerViewAdapter(activity = requireActivity())
+                    val layoutManager =  LinearLayoutManager(context)
+                    layoutManager.orientation = LinearLayoutManager.HORIZONTAL
+                    recyclerView?.adapter = forecastRecyclerView
+                    recyclerView?.layoutManager = layoutManager
+                    forecastRecyclerView?.setForecasts(forecats)
+                }
 
                 setWeatherIcon(currentWeather)
                 setWeatherTemperature(currentWeather)

@@ -38,4 +38,5 @@
     <string name="helmholtz">helmholtz</string>
     <string name="mammatus">mammatus</string>
     <string name="weather">Weather</string>
+    <string name="description">Description</string>
 </resources>
