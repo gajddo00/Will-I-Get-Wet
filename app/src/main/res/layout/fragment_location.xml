@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.location.LocationFragment">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/use_location"/>
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/location_switch"
+            android:gravity="end"
+            android:theme="@style/CustomSwitchTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_card"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/colorPrimary"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/location_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:hint="@string/search_a_city"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="80dp"
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/cities_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

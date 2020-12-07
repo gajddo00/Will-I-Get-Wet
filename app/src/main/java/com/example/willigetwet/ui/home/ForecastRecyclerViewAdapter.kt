@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.willigetwet.R
 import com.example.willigetwet.model.WeatherForecast
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.*
 
 
 class ForecastRecyclerViewAdapter(activity: FragmentActivity) : RecyclerView.Adapter<ForecastRecyclerViewAdapter.ViewHolder>() {
@@ -47,7 +50,11 @@ class ForecastRecyclerViewAdapter(activity: FragmentActivity) : RecyclerView.Ada
     override fun getItemCount(): Int = forecasts.count()
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.day.text = "SAT"
+        val daysInWeek = listOf("MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN")
+        val date = forecasts[position].dtTxt.substring(0, 10)
+        val ordinal = LocalDate.parse(date).dayOfWeek.ordinal
+
+        holder.day.text = daysInWeek[ordinal]
         holder.temperature.text = (forecasts[position].main?.temp?.minus(273.15))?.toInt()
             .toString() + " °C"
         holder.description.text = forecasts[position].weather?.get(0)?.description

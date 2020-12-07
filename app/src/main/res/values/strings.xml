@@ -39,4 +39,7 @@
     <string name="mammatus">mammatus</string>
     <string name="weather">Weather</string>
     <string name="description">Description</string>
+    <string name="search_a_city">Search a city</string>
+    <string name="use_gps">Use GPS</string>
+    <string name="use_location">Use location</string>
 </resources>

@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/navigation_location"
+        android:name="com.example.willigetwet.ui.location.LocationFragment"
+        android:label="Location"
+        tools:layout="@layout/fragment_location"/>
+
+    <fragment
         android:id="@+id/navigation_clouds"
         android:name="com.example.willigetwet.ui.cloudsbook.CloudsFragment"
         android:label="Clouds"
@@ -35,4 +41,8 @@
             app:argType="string"
             android:defaultValue="default"/>
     </fragment>
+
+    <action android:id="@+id/nav_to_location"
+        app:destination="@id/navigation_location"/>
+
 </navigation>

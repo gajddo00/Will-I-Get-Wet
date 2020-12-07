@@ -1,5 +1,7 @@
 package com.example.willigetwet.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import java.util.*
 
@@ -111,6 +113,23 @@ class City {
     var sunrise: Long = 0
     @SerializedName("sunset")
     var sunset: Long = 0
+}
+
+@Entity(tableName = "CityInfo")
+class CityInfo {
+    @SerializedName("id")
+    @PrimaryKey(autoGenerate = false)
+    var id: Int = 0
+    @SerializedName("name")
+    var name: String = ""
+    @SerializedName("state")
+    var state: String = ""
+    @SerializedName("lon")
+    var lon: Float = 0.toFloat()
+    @SerializedName("lat")
+    var lat: Float = 0.toFloat()
+    @SerializedName("country")
+    var country: String = ""
 }
 
 

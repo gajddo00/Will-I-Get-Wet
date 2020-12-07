@@ -20,4 +20,13 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="CustomSwitchTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Active thumb color & Active track color(30% transparency) -->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <!-- Inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/lighterForeground</item>
+        <!-- Inactive track color(30% transparency) -->
+        <item name="android:colorForeground">@android:color/white</item>
+    </style>
+
 </resources>
